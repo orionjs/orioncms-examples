@@ -23,6 +23,8 @@ if (Meteor.isServer) {
 	process.env.AWS_BUCKET = 'S3 BUCKET NAME';
 }
 ```
+**Don't do this in production, it's not secure**
+
 Read the instructions on how to setup the S3 bucket [here](https://github.com/Lepozepo/S3#create-your-amazon-s3)
 
 ## Content
