@@ -7,5 +7,7 @@ meteor-platform
 orionjs:admin
 orionjs:image-attribute
 orionjs:summernote
+orionjs:filesystem
+orionjs:s3
 mrt:bootswatch-yeti
 copleykj:livestamp
