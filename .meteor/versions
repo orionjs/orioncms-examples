@@ -67,7 +67,7 @@ orionjs:admin@0.1.1
 orionjs:core@0.0.5
 orionjs:filesystem@0.0.1
 orionjs:image-attribute@0.1.1
-orionjs:s3@0.0.1
+orionjs:s3@0.0.2
 orionjs:summernote@0.1.0
 random@1.0.1
 reactive-dict@1.0.4
