@@ -12,28 +12,25 @@ orion.addEntity('posts', {
 		label: "Title",
 	},
 	/**
-	 * The image attribute is using a custom orion
-	 * attribute: orion.attribute.image.
-	 * This is where orion makes the magic. Just set 
+	 * The file attribute is a custom orion attribute
+	 * This is where orion do the magic. Just set 
 	 * the attribute type and it will automatically
-	 * create the form for the image.
+	 * create the form for the file.
 	 * WARNING: the url of the image will not be saved in
 	 * post.image, it will be saved in post.image.link.
 	 */
-	image: {
-		type: orion.attributes.image,
-		label: "Image",
-	},
+	image: orion.attribute('file', {
+	    label: 'Image',
+	    optional: true
+	}),
 	/**
 	 * Here its the same with image attribute.
 	 * summernote is a html editor.
-	 * WARNING: the content will not be saved in
-	 * post.body, it will be saved in post.body.content.
 	 */
-	body: {
-		type: orion.attributes.summernote,
-		label: "Body",
-	}
+	body: orion.attribute('summernote', {
+	    label: 'Body',
+	    optional: true
+	}),
 },  {
 	sidebarName: 'Posts',
 	pluralName: 'Posts',
@@ -41,17 +38,17 @@ orion.addEntity('posts', {
 	/**
 	 * You have to put here what do you want to show in
 	 * the entity index page.
-	 * It uses aslagle:reactive-table. Check the documentation
-	 * https://github.com/ecohealthalliance/reactive-table#setting-columns
+	 * It uses aldeed:tabular. Check the documentation
+	 * https://github.com/aldeed/meteor-tabular/
 	 */
-	defaultIndexTableFields: [
+	tableColumns: [
+		{ data:'title', title: 'Title' },
 		/**
-		 * Every custom orion attribute comes with it index table field.
-		 * In this case, you specify the key (image) and the label (Image)
-		 * and it will show a small image in the index table.
+		 * If you want to show a custom orion attribute in
+		 * the index table you must call this function
+		 * orion.attributeColumn(attributeType, key, label)
 		 */
-		orion.adminIndexAttributeViews.image("image", "Image"),
-		{key:'title', label: 'Title'},
-		orion.adminIndexAttributeViews.summernote("body", "Body"),
+		orion.attributeColumn('file', 'image', 'Image'),
+		orion.attributeColumn('summernote', 'body', 'Preview')
 	]
 });

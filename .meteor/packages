@@ -5,9 +5,9 @@
 
 meteor-platform
 orionjs:admin
-orionjs:image-attribute
+orionjs:file-attribute
 orionjs:summernote
 orionjs:filesystem
 orionjs:s3
-mrt:bootswatch-yeti
+ian:bootstrap-3
 copleykj:livestamp

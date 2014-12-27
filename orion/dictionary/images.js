@@ -5,17 +5,17 @@
  * each dictionary category
  */
 
-orion.dictionary.addDefinition('logo', 'images', {
+orion.dictionary.addDefinition('logo', 'images', 
 	/**
-	 * The image attribute is using a custom orion
-	 * attribute: orion.attribute.image.
-	 * This is where orion makes the magic. Just set 
+	 * The file attribute is a custom orion attribute
+	 * This is where orion do the magic. Just set 
 	 * the attribute type and it will automatically
-	 * create the form for the image.
+	 * create the form for the file.
 	 * WARNING: the url of the image will not be saved in
-	 * logo, it will be saved in logo.link.
+	 * logo, it will be saved in logo.url.
 	 */
-    type: orion.attributes.image,
-    label: "Site Logo",
-    optional: true,
-});
+	orion.attribute('file', {
+	    label: 'Site Logo',
+	    optional: true
+	})
+);

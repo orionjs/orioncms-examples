@@ -12,9 +12,9 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			<a href="{{ pathFor 'home' }}">Back</a>
 			<h3>{{ title }} <small>{{ livestamp createdAt }}</small></h3>
-			<img class="img-responsive" src="{{ image.link }}">
+			<img class="img-responsive" src="{{ image.url }}">
 			<br>
-			{{{ body.content }}}
+			{{{ body }}}
 		</div>
 	</div>
 </template>

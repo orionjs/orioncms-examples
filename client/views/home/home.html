@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3 text-center">
 			<br>
-			<img class="img-circle" src="{{ dict 'logo.link' 'http://lorempixel.com/300/300/' }}">
+			<img class="img-circle" src="{{ dict 'logo.url' 'http://lorempixel.com/300/300/' }}">
 			<h1>{{ dict 'siteName' }}</h1>
 			<p>{{ dict 'description' }}</p>
 		</div>
@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
 			<h3>{{ title }} <small>{{ livestamp createdAt }}</small></h3>
-			<img class="img-responsive" src="{{ image.link }}">
+			<img class="img-responsive" src="{{ image.url }}">
 			<br>
 			<a href="{{ pathFor 'post' }}" class="btn btn-primary btn-xs">View</a>
 			<hr>

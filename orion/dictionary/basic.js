@@ -21,7 +21,6 @@ orion.dictionary.addDefinition('description', 'basic', {
     label: "Description of the site",
     optional: true,
     autoform: {
-    	type: 'textarea',
-    	rows: '8',
+        type: 'textarea',
     }
 });
