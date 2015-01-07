@@ -5,6 +5,7 @@
 
 meteor-platform
 orionjs:admin
+orionjs:styles
 orionjs:file-attribute
 orionjs:summernote
 orionjs:filesystem

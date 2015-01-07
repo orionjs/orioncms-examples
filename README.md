@@ -1,6 +1,8 @@
 Orion Example Blog
 ==================
 
+```v0.3``
+
 http://orion.meteor.com
 
 Learn how to use orion using this example
@@ -22,7 +24,7 @@ Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s
 This example covers the following points
 
 - How to create entities and the dictionary
-- How to use the image attribute
+- How to use the file attribute
 - How to use summernote
 - Using iron router with orion
 - Subscribing to the dictionary and entities

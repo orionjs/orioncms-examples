@@ -32,6 +32,7 @@ orion.addEntity('posts', {
 	    optional: true
 	}),
 },  {
+	icon: 'bookmark',
 	sidebarName: 'Posts',
 	pluralName: 'Posts',
 	singularName: 'Post',
