@@ -46,6 +46,7 @@ livedata@1.0.12
 localstorage@1.0.2
 logging@1.0.6
 manuelschoebel:ms-seo@0.4.1
+matb33:collection-hooks@0.7.7
 meteor@1.1.4
 meteor-platform@1.2.1
 meteorhacks:subs-manager@1.1.0
@@ -60,12 +61,12 @@ nicolaslopezj:tabular@0.2.2
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
-orionjs:admin@0.5.0
-orionjs:core@0.1.3
+orionjs:admin@0.5.1
+orionjs:core@0.2.0
 orionjs:file-attribute@0.0.3
 orionjs:filesystem@0.0.10
-orionjs:s3@0.0.8
-orionjs:styles@0.1.0
+orionjs:s3@0.0.9
+orionjs:styles@0.1.1
 orionjs:summernote@0.2.2
 random@1.0.2
 reactive-dict@1.0.5

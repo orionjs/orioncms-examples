@@ -12,14 +12,12 @@
  */
 orion.dictionary.addDefinition('siteName', 'basic', {
     type: String,
-    label: "Site Name",
-    optional: true,
+    label: "Site Name"
 });
 
 orion.dictionary.addDefinition('description', 'basic', {
     type: String,
     label: "Description of the site",
-    optional: true,
     autoform: {
         type: 'textarea'
     }
