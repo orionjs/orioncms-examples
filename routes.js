@@ -35,7 +35,7 @@ Router.map(function() {
 	});
 
 	this.route('post', {
-		path: '/:_id',
+		path: '/posts/:_id',
 		layoutTemplate: 'layout',
 		loadingTemplate: 'adminLoading',
 		waitOn: function() {

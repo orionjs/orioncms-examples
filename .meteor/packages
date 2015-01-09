@@ -10,5 +10,5 @@ orionjs:file-attribute
 orionjs:summernote
 orionjs:filesystem
 orionjs:s3
-ian:bootstrap-3
+# ian:bootstrap-3
 copleykj:livestamp
