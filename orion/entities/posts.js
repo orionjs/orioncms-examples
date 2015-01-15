@@ -27,7 +27,7 @@ orion.addEntity('posts', {
 	 * Here its the same with image attribute.
 	 * summernote is a html editor.
 	 */
-	body: orion.attribute('summernote', {
+	body: orion.attribute('froala', {
 	    label: 'Body',
 	    optional: true
 	}),
@@ -50,6 +50,6 @@ orion.addEntity('posts', {
 		 * orion.attributeColumn(attributeType, key, label)
 		 */
 		orion.attributeColumn('file', 'image', 'Image'),
-		orion.attributeColumn('summernote', 'body', 'Preview')
+		orion.attributeColumn('froala', 'body', 'Preview')
 	]
 });

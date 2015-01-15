@@ -7,7 +7,7 @@ meteor-platform
 orionjs:core
 orionjs:styles
 orionjs:file-attribute
-orionjs:summernote
+orionjs:froala-editor
 orionjs:filesystem
 orionjs:s3
 ian:bootstrap-3
