@@ -11,7 +11,7 @@
 <template name="homePostItem">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
-			<div class="image" style="background-image: url({{# if image }}{{ image.url }}{{ else }}http://lorempixel.com/1200/700/{{/ if }})">
+			<div class="image" style="{{# if image }}background-image: url({{ image.url }}){{/ if }}">
 				<div class="content">
 					<h3>
 						{{ title }} <small>{{ livestamp createdAt }}</small>

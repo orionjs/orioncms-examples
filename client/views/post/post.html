@@ -1,5 +1,5 @@
 <template name="post">
-	<div class="post-header" style="background-image: url({{# if image }}{{ image.url }}{{ else }}http://lorempixel.com/1200/700/{{/ if }})">
+	<div class="post-header" style="{{# if image }}background-image: url({{ image.url }}){{/ if }}">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">

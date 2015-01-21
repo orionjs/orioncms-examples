@@ -13,6 +13,7 @@ Template.post.events({
 		})
 		$(".body").animate({
 			top: $(".body").height() +10, 
+			opacity: 0
 		})
 		$("html, body").animate({ 
 			scrollTop: 0 
