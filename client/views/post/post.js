@@ -12,8 +12,7 @@ Template.post.events({
 			top: ($(".post-header").height() * -1) -10, 
 		})
 		$(".body").animate({
-			top: $(".body").height() +10, 
-			opacity: 0
+			top: $(window).height() +10, 
 		})
 		$("html, body").animate({ 
 			scrollTop: 0 
