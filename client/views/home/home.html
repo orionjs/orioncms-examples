@@ -1,28 +1,23 @@
 <template name="home">
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3 text-center">
-			<br>
-			<img class="img-circle" src="{{ dict 'logo.url' 'http://lorempixel.com/300/300/' }}">
-			<h1>{{ dict 'siteName' }}</h1>
-			<p>{{ dict 'description' }}</p>
+	<div class="container">
+		<div class="posts-list">
+			{{# each posts }}
+				{{> homePostItem }}
+			{{/ each }}
 		</div>
 	</div>
-	<br><br>
-
-	{{# each posts }}
-		{{> homePostItem }}
-	{{/ each }}
 </template>
 
 <template name="homePostItem">
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<h3>{{ title }} <small>{{ livestamp createdAt }}</small></h3>
-			<img class="img-responsive" src="{{ image.url }}">
-			<br>
-			<a href="{{ pathFor 'post' }}" class="btn btn-primary btn-xs">View</a>
-			<hr>
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="image" style="background-image: url({{# if image }}{{ image.url }}{{ else }}http://lorempixel.com/1200/700/{{/ if }})">
+				<div class="content">
+					<h3>
+						{{ title }} <small>{{ livestamp createdAt }}</small>
+					</h3>
+				</div>
+			</div>
 		</div>
 	</div>
-
 </template>

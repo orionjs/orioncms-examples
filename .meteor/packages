@@ -10,5 +10,6 @@ orionjs:file-attribute
 orionjs:froala-editor
 orionjs:filesystem
 orionjs:s3
-ian:bootstrap-3
+mrt:bootswatch-yeti
 copleykj:livestamp
+less

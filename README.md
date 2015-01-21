@@ -1,14 +1,12 @@
 Orion Example Blog
 ==================
 
-``` v0.6 ```
+``` v1.0 ```
 
 http://orion.meteor.com
 http://orion-example.meteor.com
 
-Learn how to use orion using this example
-
-![alt tag](http://i.imgur.com/QmxzhaV.jpg)
+**Learn how to use orion with this example.**
 
 Orion is a simple and useful cms for meteor. 
 Creates automatically a admin panel for your 

@@ -1,20 +1,31 @@
 <template name="post">
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3 text-center">
-			<br>
-			<h1>{{ dict 'siteName' }}</h1>
-			<p>{{ dict 'description' }}</p>
+	<div class="post-header" style="background-image: url({{# if image }}{{ image.url }}{{ else }}http://lorempixel.com/1200/700/{{/ if }})">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="content">
+						<span class="back">
+							Back
+						</span>
+						<h3>
+							{{ title }} <small>{{ livestamp createdAt }}</small>
+						</h3>
+						<p class="writer">
+							{{ getUserName }}
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<br><br>
-
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<a href="{{ pathFor 'home' }}">Back</a>
-			<h3>{{ title }} <small>{{ livestamp createdAt }}</small></h3>
-			<img class="img-responsive" src="{{ image.url }}">
-			<br>
-			{{{ body }}}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="body">
+					{{{ body }}}
+				</div>
+			</div>
 		</div>
 	</div>
 </template>

@@ -1,6 +1,10 @@
 Orion Example Blog
 ==================
 
+### 1.0
+
+- Added some style and animations.
+
 ### 0.6
 
 - Allow users registration.
