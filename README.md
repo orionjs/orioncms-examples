@@ -4,6 +4,7 @@ Orion Example Blog
 ``` v0.6 ```
 
 http://orion.meteor.com
+http://orion-example.meteor.com
 
 Learn how to use orion using this example
 
@@ -18,6 +19,11 @@ key/value definitions for your site.
 
 This example uses AWS S3 to save the files.
 Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3)
+
+## Updates
+
+Any change that has orion will be reflected here, always up to date.
+*See the commit history*.
 
 ## Content
 
