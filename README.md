@@ -1,9 +1,7 @@
 Orion Example Blog
 ==================
 
-```
-v0.5
-```
+``` v0.6 ```
 
 http://orion.meteor.com
 
