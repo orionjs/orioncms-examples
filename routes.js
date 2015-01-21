@@ -29,7 +29,7 @@ Router.map(function() {
 				 * local database, ie only the items that you 
 				 * subscribed before.
 				 */
-				posts: orion.entities.posts.collection.find()
+				posts: orion.entities.posts.collection.find({}, { sort: { createdAt: -1 } })
 			}
 		}
 	});
