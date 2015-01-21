@@ -3,7 +3,6 @@ Orion Example Blog
 
 ``` v1.0 ```
 
-http://orion.meteor.com
 http://orion-example.meteor.com
 
 **Learn how to use orion with this example.**
