@@ -1,11 +1,10 @@
 Orion Example Blog
 ==================
 
-```
-v0.4
-```
+``` v0.6 ```
 
 http://orion.meteor.com
+http://orion-example.meteor.com
 
 Learn how to use orion using this example
 
@@ -21,12 +20,19 @@ key/value definitions for your site.
 This example uses AWS S3 to save the files.
 Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3)
 
+## Updates
+
+Any change that has orion will be reflected here, always up to date.
+*See the commit history*.
+
 ## Content
 
 This example covers the following points
 
 - How to create entities and the dictionary
 - How to use the file attribute
-- How to use summernote
+- How to use froala editor
 - Using iron router with orion
 - Subscribing to the dictionary and entities
+- Allow users registration
+- Orion Permissions

@@ -1,6 +1,10 @@
 Orion Example Blog
 ==================
 
+### 0.6
+
+- Allow users registration.
+
 ### 0.5
 
 - Changed orionjs:admin to orionjs:core.
