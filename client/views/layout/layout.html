@@ -1,6 +1,8 @@
 <template name="layout">
 	<div class="header">
-		<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
+		<a href="http://orion.meteor.com">
+			<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
+		</a>
 		<h1 class="title">Example Blog</h1>
 		<p>{{ dict 'description' }}</p>
 		<p class="add">
@@ -11,11 +13,5 @@
 	</div>
 	<!-- Beacouse this is used like a layout, the yield will include the template with the name of the route.  -->
 	{{> yield }}
-
-	<div class="container">
-		<br>
-		<p class="text-center text-muted footer">
-			This example was made using <a href="http://orion.meteor.com">orion</a>
-		</p>
-	</div>
+	<br><br><br>
 </template>
