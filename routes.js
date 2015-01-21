@@ -37,7 +37,7 @@ Router.route('/posts/:_id', {
 	waitOn: function() {
 		return [
 			orion.subs.subscribe('dictionary'), 
-			orion.subs.subscribe('entity', 'posts', {_id: this.params._id}),
+			orion.subs.subscribe('entity', 'posts'),
 			orion.subs.subscribe('usersNames')
 		] 
 	},
