@@ -4,6 +4,9 @@ Orion Example Blog
 ### 0.5
 
 - Changed orionjs:admin to orionjs:core.
+### 0.5
+
+- Changed orionjs:admin to orionjs:core.
 
 ### 0.4
 
