@@ -2,7 +2,7 @@ Orion Example Blog
 ==================
 
 ```
-v0.4
+v0.5
 ```
 
 http://orion.meteor.com
@@ -27,6 +27,8 @@ This example covers the following points
 
 - How to create entities and the dictionary
 - How to use the file attribute
-- How to use summernote
+- How to use froala editor
 - Using iron router with orion
 - Subscribing to the dictionary and entities
+- Allow users registration
+- Orion Permissions
