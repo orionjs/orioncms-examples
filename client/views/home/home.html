@@ -1,8 +1,10 @@
 <template name="home">
 	<div class="posts-list">
-		{{# each posts }}
-			{{> homePostItem }}
-		{{/ each }}
+		<div class="container">
+			{{# each posts }}
+				{{> homePostItem }}
+			{{/ each }}
+		</div>
 	</div>
 	<div class="white-panel"></div>
 </template>
