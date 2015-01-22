@@ -1,23 +1,28 @@
 Template.homePostItem.events({
 	'click .image': function (event) {
 		var post = this;
-		var container = $(event.target);
-		container.animate({
-			top: (container.offset().top * -1) + 10, 
-			left: (container.offset().left * -1), 
-			width: $(window).width()
+		var container = $(event.currentTarget);
+		container.parent().height(container.outerHeight());
+		container.find(".content").animate({ opacity: 0 })
+		container.css({
+			"z-index": 250,
+			position: "fixed",
+			top: container.offset().top - $(window).scrollTop() + 10, 
+			left: container.offset().left, 
+			width: container.width(), 
+			height: container.height()
 		})
-		container.find('.content').animate({
-			opacity: 0
+		$(".white-panel").css({ display: 'inherit' })
+		$(".white-panel").animate({ opacity: 1 }, function() {
+			$("html, body").scrollTop(0);
+			container.animate({
+				top: 0, 
+				left: 0, 
+				width: $(window).width()
+			}, function() {
+				Router.go('post', post);
+			})
 		})
-		$(".image").not(event.target).animate({
-			opacity: 0
-		})
-		$("html, body").animate({ 
-			scrollTop: 0 
-		}, function() {
-			Router.go('post', post);
-		});
 	}
 });
 
