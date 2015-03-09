@@ -4,12 +4,11 @@
 # but you can also edit it by hand.
 
 meteor-platform
-orionjs:core
-orionjs:styles
+orionjs:bootstrap
 orionjs:file-attribute
 orionjs:froala-editor
 orionjs:filesystem
 orionjs:s3
-mrt:bootswatch-yeti
+mizzao:bootstrap-3
 copleykj:livestamp
 less

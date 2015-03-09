@@ -12,7 +12,6 @@ Router.route('/', {
 		 * Remember to always subscribe to the dictionary.
 		 */
 		return [
-			orion.subs.subscribe('dictionary'), 
 			orion.subs.subscribe('entity', 'posts'), 
 			orion.subs.subscribe('usersNames')
 		] 
@@ -35,8 +34,7 @@ Router.route('/posts/:_id', {
 	layoutTemplate: 'layout',
 	loadingTemplate: 'adminLoading',
 	waitOn: function() {
-		return [
-			orion.subs.subscribe('dictionary'), 
+		return [ 
 			orion.subs.subscribe('entity', 'posts'),
 			orion.subs.subscribe('usersNames')
 		] 
