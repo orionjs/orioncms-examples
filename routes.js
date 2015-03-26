@@ -12,6 +12,7 @@ Router.route('/', {
 		 * Remember to always subscribe to the dictionary.
 		 */
 		return [
+			orion.subs.subscribe('pages', {}, { fields: {url: 1, title: 1, template: 1} }),
 			orion.subs.subscribe('entity', 'posts'), 
 			orion.subs.subscribe('usersNames')
 		] 

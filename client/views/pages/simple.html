@@ -1,0 +1,19 @@
+<template name="pagesSimple">
+	<div class="header">
+		<a href="http://orion.meteor.com">
+			<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
+		</a>
+		<h1 class="title">{{ title }}</h1>
+		<p>{{ dict 'description' }}</p>
+		<p>
+			<a href="{{ pathFor 'home' }}">
+				Back
+			</a>
+		</p>
+		<br>
+		<div class="content">
+			{{{ content }}}
+		</div>
+	</div>
+	<br><br><br>
+</template>

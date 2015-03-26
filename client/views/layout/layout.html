@@ -4,7 +4,14 @@
 			<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
 		</a>
 		<h1 class="title">Example Blog</h1>
-		<p>{{ dict 'description' }}</p>
+		<p>{{ dict 'description' 'No Description' }}</p>
+		<p>
+			{{# each pages template="pagesSimple" }}
+				<a href="{{ path }}">
+					{{ title }}
+				</a>
+			{{/ each }}
+		</p>
 		<p class="add">
 			<a href="{{ pathFor 'adminEntitiesCreate' entity='posts' }}">
 				+

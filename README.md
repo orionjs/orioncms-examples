@@ -1,7 +1,7 @@
 Orion Example Blog
 ==================
 
-``` v1.1 ```
+``` v1.2 ```
 
 http://orion-example.meteor.com
 
@@ -33,3 +33,5 @@ This example covers the following points
 - Subscribing to the dictionary and entities
 - Allow users registration
 - Orion Permissions
+- Orion pages package
+- Languages

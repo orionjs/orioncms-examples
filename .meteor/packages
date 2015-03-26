@@ -9,6 +9,7 @@ orionjs:file-attribute
 orionjs:froala-editor
 orionjs:filesystem
 orionjs:s3
+orionjs:pages
 mizzao:bootstrap-3
 copleykj:livestamp
 less

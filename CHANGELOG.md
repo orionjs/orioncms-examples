@@ -1,6 +1,10 @@
 Orion Example Blog
 ==================
 
+### 1.2
+
+- Pages and languages
+
 ### 1.1
 
 - Changed to new the package (orionjs:bootstrap).
