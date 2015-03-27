@@ -15,7 +15,7 @@ key/value definitions for your site.
 ## Installing
 
 This example uses AWS S3 to save the files.
-Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3)
+Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3).
 
 ## Updates
 
