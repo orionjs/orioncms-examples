@@ -29,9 +29,9 @@ This example covers the following points
 - How to create entities and the dictionary
 - How to use the file attribute
 - How to use froala editor
+- How to use languages in the dictionary
 - Using iron router with orion
-- Subscribing to the dictionary and entities
+- Subscribing to the entities
 - Allow users registration
 - Orion Permissions
 - Orion pages package
-- Languages
