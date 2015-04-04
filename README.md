@@ -24,7 +24,7 @@ Any change that has orion will be reflected here, always up to date.
 
 ## Content
 
-This example covers the following points
+This example covers the following points:
 
 - How to create entities and the dictionary
 - How to use the file attribute
