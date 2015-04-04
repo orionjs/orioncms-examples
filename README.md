@@ -17,11 +17,6 @@ key/value definitions for your site.
 This example uses AWS S3 to save the files.
 Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3).
 
-## Dependencies 
-
-Please check out packages file to see which packages are used with this project. It will be important if you want to tweak it your own way.
-
-https://github.com/orionjs/example-blog/blob/master/.meteor/packages
 
 ## Updates
 
