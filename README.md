@@ -42,3 +42,14 @@ This example covers the following points:
 - Allow users registration
 - Orion Permissions
 - Orion pages package
+
+## Orion Packages
+
+Below is a list of `Orion Packages` used to build this blog example.
+
+- [orionjs:bootstrap](https://github.com/orionjs/bootstrap/)
+- [orionjs:file-attribute](https://github.com/orionjs/file-attribute)
+- [orionjs:froala-editor](https://github.com/orionjs/froala-editor)
+- [orionjs:filesystem](https://github.com/orionjs/filesystem)
+- [orionjs:s3](https://github.com/orionjs/s3)
+- [orionjs:pages](https://github.com/orionjs/pages)
