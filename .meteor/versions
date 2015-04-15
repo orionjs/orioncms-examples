@@ -54,7 +54,7 @@ momentjs:moment@2.8.4
 mongo@1.1.0
 nicolaslopezj:options@1.0.0
 nicolaslopezj:reactive-templates@1.0.1
-nicolaslopezj:roles@1.0.3
+nicolaslopezj:roles@1.0.5
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3

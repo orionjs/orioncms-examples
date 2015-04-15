@@ -22,6 +22,13 @@ CommunityRole.helper('dictionary.getAllowedCategories', function() {
 CommunityRole.allow('collection.posts.index', true);
 
 /**
+ * And we will make that the users only see their posts in the index
+ */
+CommunityRole.helper('collection.posts.indexFilter', function() {
+  return { createdBy: this.userId };
+})
+
+/**
  * Users can create posts
  */
 CommunityRole.allow('collection.posts.insert', true);
