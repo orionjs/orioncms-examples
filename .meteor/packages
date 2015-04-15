@@ -17,3 +17,4 @@ orionjs:relationships
 accounts-password
 less
 reywood:publish-composite
+dburles:collection-helpers

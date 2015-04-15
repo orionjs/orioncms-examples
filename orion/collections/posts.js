@@ -67,3 +67,16 @@ Posts.attachSchema(new SimpleSchema({
    */
   createdBy: orion.attribute('createdBy') 
 }));
+
+
+/**
+ * Using dburles:collection-helpers we will add a helper to the posts
+ * collection to easily get the user
+ */
+
+Posts.helpers({
+  getCreator: function () {
+    return Meteor.users.findOne({ _id: this.createdBy });
+  }
+});
+

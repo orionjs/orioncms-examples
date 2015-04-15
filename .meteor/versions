@@ -52,7 +52,7 @@ minimongo@1.0.8
 mobile-status-bar@1.0.3
 momentjs:moment@2.8.4
 mongo@1.1.0
-nicolaslopezj:options@1.0.0
+nicolaslopezj:options@1.0.1
 nicolaslopezj:reactive-templates@1.0.1
 nicolaslopezj:roles@1.0.5
 npm-bcrypt@0.7.8_2
@@ -93,10 +93,10 @@ tracker@1.0.7
 twbs:bootstrap@3.3.4
 ui@1.0.6
 underscore@1.0.3
+underscorestring:underscore.string@3.0.3
 url@1.0.4
 useraccounts:bootstrap@1.8.1
 useraccounts:core@1.8.1
 webapp@1.2.0
 webapp-hashing@1.0.3
-wizonesolutions:underscore-string@1.0.0
-zimme:iron-router-active@1.0.1
+zimme:iron-router-active@1.0.4

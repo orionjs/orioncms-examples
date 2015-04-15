@@ -1,31 +1,13 @@
 <template name="post">
-	<div class="post-header" style="{{# if post.image }}background-image: url({{ post.image.url }}){{/ if }}">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-					<div class="content">
-						<span class="back">
-							Back
-						</span>
-						<h3>
-							{{ post.title }} <small><!--{{ livestamp createdAt }}--></small>
-						</h3>
-						<p class="writer">
-							{{ getUserName }}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br><br>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<div class="body">
-					{{{ post.body }}}
-				</div>
-			</div>
+	<div class="post-detail">
+		<h3>
+      {{ post.title }}
+      <small>by {{ post.getCreator.profile.name }}</small>  
+    </h3>
+		<div class="image" style="background-image: url({{ post.image.url }})"></div>
+		<br>
+		<div class="content">
+			{{{ post.body }}}
 		</div>
 	</div>
 </template>

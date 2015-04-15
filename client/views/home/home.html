@@ -1,24 +1,27 @@
 <template name="home">
-	<div class="posts-list">
-		<div class="container">
-			{{# each posts }}
-				{{> homePostItem }}
-			{{/ each }}
-		</div>
-	</div>
-	<div class="white-panel"></div>
+	{{# unless currentUser }}
+	<p><b>Register to edit the content of this site</b></p>
+	{{/ unless }}
+	<p>
+		Orion allows the admin to easily 
+		<a href="{{ pathFor 'dictionary.update' }}">edit</a> 
+		content of the site, like the following text: 
+		<i class="text-muted">"{{ dict 'public.homeText' 'No text' }}"</i>.
+	</p>
+	{{# each posts }}
+		{{> homePost }}
+	{{/ each }}
 </template>
 
-<template name="homePostItem">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1">
-			<div class="image" style="{{# if image }}background-image: url({{ image.url }}){{/ if }}">
-				<div class="content">
-					<h3>
-						{{ title }} <small><!--{{ livestamp createdAt }}--></small>
-					</h3>
-				</div>
-			</div>
-		</div>
+<template name="homePost">
+	<hr>
+	<div class="home-post">
+		<h3>
+			{{ title }}
+			<small>by {{ getCreator.profile.name }}</small>
+		</h3>
+		<a href="{{ pathFor 'post' }}">
+			<div class="image" style="background-image: url({{ image.url }})"></div>
+		</a>
 	</div>
 </template>
