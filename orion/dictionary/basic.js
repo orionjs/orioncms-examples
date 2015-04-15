@@ -5,20 +5,12 @@
  * each dictionary category
  */
 
-/**
- * The siteName definition is special, becouse 
- * it will change the text of the link to the home 
- * page in the admin.
- */
-orion.dictionary.addDefinition('siteName', 'basic', {
+orion.dictionary.addDefinition('name', 'basic', {
     type: String,
     label: "Site Name"
 });
 
 orion.dictionary.addDefinition('description', 'basic', {
     type: String,
-    label: "Description of the site",
-    autoform: {
-        type: 'textarea'
-    }
+    label: "Description of the site"
 });

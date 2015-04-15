@@ -4,12 +4,16 @@
 # but you can also edit it by hand.
 
 meteor-platform
-orionjs:bootstrap
-orionjs:file-attribute
-orionjs:froala-editor
+orionjs:core
+orionjs:simple-theme
+twbs:bootstrap
+fortawesome:fontawesome
 orionjs:filesystem
 orionjs:s3
-orionjs:pages
-mizzao:bootstrap-3
-copleykj:livestamp
+orionjs:summernote
+orionjs:froala
+orionjs:file-attribute
+orionjs:relationships
+accounts-password
 less
+reywood:publish-composite

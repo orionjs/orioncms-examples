@@ -5,15 +5,8 @@
 		</a>
 		<h1 class="title">Example Blog</h1>
 		<p>{{ dict 'description' 'No Description' }}</p>
-		<p>
-			{{# each pages template="pagesSimple" }}
-				<a href="{{ path }}">
-					{{ title }}
-				</a>
-			{{/ each }}
-		</p>
 		<p class="add">
-			<a href="{{ pathFor 'adminEntitiesCreate' entity='posts' }}">
+			<a href="{{ pathFor 'collections.posts.create' }}">
 				+
 			</a>
 		</p>

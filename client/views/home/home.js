@@ -26,8 +26,15 @@ Template.homePostItem.events({
 	}
 });
 
-Template.home.rendered = function() {
+Template.home.helpers({
+	posts: function () {
+		return Posts.find();
+	}
+});
+
+Template.home.onRendered(function() {
+	this.subscribe('posts')
 	$(".posts-list").animate({
 		top: 0
 	})
-}
+});

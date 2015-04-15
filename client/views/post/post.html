@@ -1,5 +1,5 @@
 <template name="post">
-	<div class="post-header" style="{{# if image }}background-image: url({{ image.url }}){{/ if }}">
+	<div class="post-header" style="{{# if post.image }}background-image: url({{ post.image.url }}){{/ if }}">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
@@ -8,7 +8,7 @@
 							Back
 						</span>
 						<h3>
-							{{ title }} <small>{{ livestamp createdAt }}</small>
+							{{ post.title }} <small><!--{{ livestamp createdAt }}--></small>
 						</h3>
 						<p class="writer">
 							{{ getUserName }}
@@ -23,7 +23,7 @@
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="body">
-					{{{ body }}}
+					{{{ post.body }}}
 				</div>
 			</div>
 		</div>

@@ -1,7 +1,10 @@
 Template.post.helpers({
+	post: function() {
+		return Posts.findOne(Router.current().params._id);
+	},
 	getUserName: function() {
-		var createdBy = this.createdBy;
-		var user =  Meteor.users.findOne(createdBy);
+		var post = Posts.findOne(Router.current().params._id);
+		var user = post && Meteor.users.findOne(post.createdBy);
 		return (user && user.profile && user.profile.name) || 'No Name';
 	}
 });
@@ -22,12 +25,17 @@ Template.post.events({
 	}
 });
 
-Template.post.rendered = function() {
-	$(".content").animate({
-		top: 240
+Template.post.onRendered(function() {
+	var subscription = this.subscribe('onePost', Router.current().params._id);
+	this.autorun(function() {
+		if (subscription.ready()) {
+			$(".content").animate({
+				top: 240
+			})
+			$(".body").animate({
+				top: 0, 
+				opacity: 1
+			})
+		}
 	})
-	$(".body").animate({
-		top: 0, 
-		opacity: 1
-	})
-}
+});

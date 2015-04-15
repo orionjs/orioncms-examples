@@ -1,6 +1,10 @@
 Orion Example Blog
 ==================
 
+### 2.0
+
+- Updated to Orion v1.0.
+
 ### 1.2
 
 - Pages and languages
