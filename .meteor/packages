@@ -5,7 +5,7 @@
 
 meteor-platform
 orionjs:core
-orionjs:simple-theme
+orionjs:bootstrap
 twbs:bootstrap
 fortawesome:fontawesome
 orionjs:filesystem
