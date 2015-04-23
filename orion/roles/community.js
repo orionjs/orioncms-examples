@@ -12,7 +12,7 @@ CommunityRole.allow('dictionary.update', true);
 /**
  * This will make users only can edit this fields in the dictionary
  */
-CommunityRole.helper('dictionary.getAllowedCategories', ['public']);
+CommunityRole.helper('dictionary.allowedCategories', ['public']);
 
 /**
  * Users can see posts in the admin
