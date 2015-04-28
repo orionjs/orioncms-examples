@@ -29,7 +29,8 @@ Posts = new orion.collection('posts', {
        */
       orion.attributeColumn('file', 'image', 'Image'),
       orion.attributeColumn('summernote', 'body', 'Content'),
-      orion.attributeColumn('createdBy', 'createdBy', 'Created By')
+      orion.attributeColumn('createdBy', 'createdBy', 'Created By'),
+      orion.attributeColumn('createdAt', 'createdAt', 'Created At')
     ]
   }
 });
@@ -65,7 +66,8 @@ Posts.attachSchema(new SimpleSchema({
    * This attribute sets the user id of the user that created 
    * this post automatically.
    */
-  createdBy: orion.attribute('createdBy') 
+  createdBy: orion.attribute('createdBy'),
+  createdAt: orion.attribute('createdAt')
 }));
 
 
