@@ -1,7 +1,7 @@
 Orion Example Blog
 ==================
 
-``` v1.2 ```
+``` v2.0 ```
 
 http://orion-example.meteor.com
 

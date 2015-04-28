@@ -1,26 +1,53 @@
 <template name="layout">
-	<div class="header">
-		<a href="http://orion.meteor.com">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<div class="header">
+					{{> header }}
+				</div>
+				<br><br>
+				<div class="content">
+					{{> yield }}
+				</div>
+				<br>
+				<div class="footer">
+					{{> footer }}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="header">
+	<div class="logo-big-screens hidden-xs">
+		<a href="{{ pathFor 'home' }}">
 			<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
 		</a>
-		<h1 class="title">Example Blog</h1>
-		<p>{{ dict 'description' 'No Description' }}</p>
-		<p>
-			{{# each pages template="pagesSimple" }}
-				<a href="{{ path }}">
-					{{ title }}
-				</a>
-			{{/ each }}
-		</p>
-		<p class="add">
-			<a href="{{ pathFor 'adminEntitiesCreate' entity='posts' }}">
-				+
+	</div>
+	<div class="visible-xs text-center">
+		<br>
+		<a href="{{ pathFor 'home' }}">
+			<img class="img-circle" src="{{ dict 'logo.url' 'http://i.imgur.com/6PeLvIG.png' }}">
+		</a>
+	</div>
+	<div class="texts">
+		<h1>
+			<a href="{{ pathFor 'home' }}">
+				Orion Example Blog
 			</a>
+		</h1>
+		<p class="description">
+			Orion is simple and powerful CMS for meteor, check more info on 
+			<a href="http://github.com/orionjs/orion">Github</a>.
 		</p>
 	</div>
-	<!-- Beacouse this is used like a layout, the yield will include the template with the name of the route.  -->
-	<div class="clearfix">
-		{{> yield }}
-	</div>
-	<br><br><br>
 </template>
+
+<template name="footer">
+	<hr>
+	<p class="text-muted">
+		<a href="http://github.com/orionjs/orion">Orion</a> 
+		is an open source platform that allow developers to create complex websites in minutes.
+		Its build with <a href="http://meteor.com">Meteor</a> by <a href="http://github.com/nicolaslopezj">Nicolás López</a>
+	</p>
+</template>	
