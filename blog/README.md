@@ -15,7 +15,7 @@ key/value definitions for your site.
 ## Installing
 
 This example uses AWS S3 to save the files.
-Read the instructions on how to setup the S3 [here](https://github.com/orionjs/s3).
+Read the instructions on how to setup the S3 [here](https://github.com/orionjs/orion/tree/master/packages/s3).
 
 
 ## Updates
@@ -42,9 +42,9 @@ This example covers the following points:
 
 Below is a list of `Orion Packages` used to build this blog example.
 
-- [orionjs:bootstrap](https://github.com/orionjs/bootstrap/)
-- [orionjs:file-attribute](https://github.com/orionjs/file-attribute)
-- [orionjs:froala-editor](https://github.com/orionjs/froala-editor)
-- [orionjs:filesystem](https://github.com/orionjs/filesystem)
-- [orionjs:s3](https://github.com/orionjs/s3)
-- [orionjs:pages](https://github.com/orionjs/pages)
+- [orionjs:bootstrap](https://github.com/orionjs/orion/tree/master/packages/bootstrap)
+- [orionjs:file-attribute](https://github.com/orionjs/orion/tree/master/packages/file-attribute)
+- [orionjs:froala-editor](https://github.com/orionjs/orion/tree/master/packages/froala)
+- [orionjs:filesystem](https://github.com/orionjs/orion/tree/master/packages/filesystem)
+- [orionjs:s3](https://github.com/orionjs/orion/tree/master/packages/s3)
+- [orionjs:pages](https://github.com/orionjs/orion/tree/master/packages/pages)
