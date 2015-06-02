@@ -17,7 +17,7 @@ meteor publish --create
 - [Edit the Orion README.md file](https://github.com/orionjs/orion/edit/master/README.md),
 add your package under the Community Add-On Packages > Languages section and make a pull request.
 
-**This repository will always be with the lastest strings, check for updates**
+**This repository will always be with the lastest strings, [check for updates](https://github.com/orionjs/examples/commits/master/language/%5Blanguage-code%5D.js)**
 
 ### Specs
 
