@@ -7,5 +7,5 @@
 
 orion.dictionary.addDefinition('homeText', 'public', {
     type: String,
-    label: "The text on the home"
+    label: orion.helpers.getTranslation('dictionary.public.homeText')
 });

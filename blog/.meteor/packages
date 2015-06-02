@@ -7,18 +7,17 @@ meteor-platform
 orionjs:core
 orionjs:bootstrap
 twbs:bootstrap
+fortawesome:fontawesome
 # orionjs:materialize
 # materialize:materialize
-fortawesome:fontawesome
 orionjs:filesystem
 orionjs:s3
 orionjs:summernote
 orionjs:froala
 orionjs:file-attribute
 orionjs:relationships
+orionjs:lang-es
 accounts-password
 less
 reywood:publish-composite
 dburles:collection-helpers
-orionjs:pages
-orionjs:lang-es

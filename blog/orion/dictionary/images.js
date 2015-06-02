@@ -15,7 +15,7 @@ orion.dictionary.addDefinition('logo', 'images',
 	 * logo, it will be saved in logo.url.
 	 */
 	orion.attribute('file', {
-	    label: 'Site Logo',
+	    label: orion.helpers.getTranslation('dictionary.images.logo'),
 	    optional: true
 	})
 );

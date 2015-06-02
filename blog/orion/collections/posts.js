@@ -6,31 +6,32 @@
  * we will show in the index of the collection in the admin
  */
 Posts = new orion.collection('posts', {
-  singularName: 'post', // The name of one of this items
-  pluralName: 'posts', // The name of more than one of this items
+  singularName: orion.helpers.getTranslation('posts.singularName'), // The name of one of this items
+  pluralName: orion.helpers.getTranslation('posts.pluralName'), // The name of more than one of this items
+  title: orion.helpers.getTranslation('posts.title'), // The title of the page
   link: {
     /**
      * The text that you want to show in the sidebar.
      * The default value is the name of the collection, so
      * in this case is not necesary
      */
-    title: 'Posts' 
+    title: orion.helpers.getTranslation('posts.title')
   },
   /**
    * Tabular settings for this collection
    */
   tabular: {
     columns: [
-      { data: "title", title: "Title" },
+      { data: 'title', title: orion.helpers.getTranslation('posts.schema.title') },
       /**
        * If you want to show a custom orion attribute in
        * the index table you must call this function
        * orion.attributeColumn(attributeType, key, label)
        */
-      orion.attributeColumn('file', 'image', 'Image'),
-      orion.attributeColumn('summernote', 'body', 'Content'),
-      orion.attributeColumn('createdBy', 'createdBy', 'Created By'),
-      orion.attributeColumn('createdAt', 'createdAt', 'Created At')
+      orion.attributeColumn('file', 'image', orion.helpers.getTranslation('posts.schema.image')),
+      orion.attributeColumn('summernote', 'body', orion.helpers.getTranslation('posts.schema.body')),
+      orion.attributeColumn('createdBy', 'createdBy', orion.helpers.getTranslation('posts.schema.createdBy')),
+      orion.attributeColumn('createdAt', 'createdAt', orion.helpers.getTranslation('posts.schema.createdAt'))
     ]
   }
 });
@@ -41,7 +42,8 @@ Posts = new orion.collection('posts', {
  */
 Posts.attachSchema(new SimpleSchema({
   title: {
-    type: String
+    type: String,
+    label: orion.helpers.getTranslation('posts.schema.title') // We use this function to make i18n work in autoform
   },
   /**
    * The file attribute is a custom orion attribute
@@ -52,7 +54,7 @@ Posts.attachSchema(new SimpleSchema({
    * .image, it will be saved in .image.url.
    */
   image: orion.attribute('file', {
-      label: 'Image',
+      label: orion.helpers.getTranslation('posts.schema.image'), // We use this function to make i18n work in autoform
       optional: true
   }),
   /**
@@ -60,7 +62,7 @@ Posts.attachSchema(new SimpleSchema({
    * summernote is a html editor.
    */
   body: orion.attribute('summernote', {
-      label: 'Body'
+      label: orion.helpers.getTranslation('posts.schema.body') // We use this function to make i18n work in autoform
   }),
   /**
    * This attribute sets the user id of the user that created 
