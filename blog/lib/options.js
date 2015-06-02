@@ -17,10 +17,11 @@ Options.arrayPush('defaultRoles', 'community');
  */
 Options.set('profileSchema', {
   picture: orion.attribute('file', {
-      label: 'Picture',
-      optional: true
+    label: orion.helpers.getTranslation('accountsPictureLabel'),
+    optional: true
   }),
   name: {
-    type: String
+    type: String,
+    label: orion.helpers.getTranslation('accountsNameLabel')
   }
 });
