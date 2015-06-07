@@ -159,6 +159,9 @@ i18n.map('[language-code]', {
     file: {
       choose: 'Choose file',
       noFile: 'No file',
+    },
+    image: {
+      choose: 'Choose image'
     }
   },
   tabular: {
