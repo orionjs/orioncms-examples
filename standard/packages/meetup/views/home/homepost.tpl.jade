@@ -1,0 +1,7 @@
+hr
+.home-post
+  h3
+    | {{ title }}
+    small by {{ getCreator.profile.name }}
+  a(href="{{ pathFor 'post' }}")
+    .image(style='background-image: url(/toronto.jpg)')
