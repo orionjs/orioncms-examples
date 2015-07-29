@@ -2,7 +2,7 @@
  * We declare the collection just like meteor default way
  * but changing Meteor.Collection to orion.collection.
  *
- * We can set options to that new collection, like which fields 
+ * We can set options to that new collection, like which fields
  * we will show in the index of the collection in the admin
  */
 Posts = new orion.collection('posts', {
@@ -15,7 +15,8 @@ Posts = new orion.collection('posts', {
      * The default value is the name of the collection, so
      * in this case is not necesary
      */
-    title: orion.helpers.getTranslation('posts.title')
+    title: orion.helpers.getTranslation('posts.title'),
+    parent: 'dictionary-update'
   },
   /**
    * Tabular settings for this collection
@@ -47,7 +48,7 @@ Posts.attachSchema(new SimpleSchema({
   },
   /**
    * The file attribute is a custom orion attribute
-   * This is where orion do the magic. Just set 
+   * This is where orion do the magic. Just set
    * the attribute type and it will automatically
    * create the form for the file.
    * WARNING: the url of the image will not be saved in
@@ -65,7 +66,7 @@ Posts.attachSchema(new SimpleSchema({
       label: orion.helpers.getTranslation('posts.schema.body') // We use this function to make i18n work in autoform
   }),
   /**
-   * This attribute sets the user id of the user that created 
+   * This attribute sets the user id of the user that created
    * this post automatically.
    */
   createdBy: orion.attribute('createdBy'),
@@ -83,4 +84,3 @@ Posts.helpers({
     return Meteor.users.findOne({ _id: this.createdBy });
   }
 });
-

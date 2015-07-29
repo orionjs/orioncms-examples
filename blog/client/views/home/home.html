@@ -3,10 +3,10 @@
 	<p><b>Register to edit the content of this site</b></p>
 	{{/ unless }}
 	<p>
-		Orion allows the admin to easily 
-		<a href="{{ pathFor 'dictionary.update' }}">edit</a> 
-		content of the site, like the following text: 
-		<i class="text-muted">"{{ dict 'public.homeText' 'No text' }}"</i>.
+		Orion allows the admin to easily
+		<a href="{{ pathFor 'dictionary.update' }}">edit</a>
+		content of the site, like the following text:
+		<i class="text-muted">"{{ dict 'public.homeText' }}"</i>.
 	</p>
 	{{# each posts }}
 		{{> homePost }}
