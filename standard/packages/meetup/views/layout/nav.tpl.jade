@@ -1,0 +1,11 @@
+ul.nav.nav-tabs
+  li.active(role='presentation')
+    a(href="{{ pathFor 'home' }}") Home
+  //- +each pages menu='topmenu'
+  +each pages
+    li(role='presentation')
+      a(href='{{path}}') {{title}}
+  li(role='presentation')
+    a(href="{{pathFor 'allpages'}}") All pages
+  li
+    a(href="{{pathFor 'accounts.index'}}") Admin

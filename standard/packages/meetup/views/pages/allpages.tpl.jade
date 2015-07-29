@@ -1,0 +1,8 @@
+h3 All Pages
+  +each pages 
+    li
+      a(href='{{ path }}') {{ title }}
+h3 Some Pages
+  +each pages template="pagesSimple" 
+    li
+      a(href='{{ path }}') {{ title }}

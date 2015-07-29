@@ -1,0 +1,6 @@
+h1.title {{ title }}
+.content
+  | {{{ content }}} <br>
+  +each bio
+    | #{name} 
+    img(src='{{photo.url}}')

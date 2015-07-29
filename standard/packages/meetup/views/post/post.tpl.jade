@@ -1,0 +1,8 @@
+.post-detail
+    h3
+      | {{ post.title }}
+      small by {{ post.getCreator.profile.name }}
+    .image(style='background-image: url({{ post.image.url }})')
+    br
+    .content
+      | {{{ post.body }}}

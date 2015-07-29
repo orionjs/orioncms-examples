@@ -1,0 +1,32 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+orionjs:core
+orionjs:bootstrap
+twbs:bootstrap
+fortawesome:fontawesome
+coffeescript
+mquandalle:jade@0.4.3
+# orionjs:materialize
+# materialize:materialize
+orionjs:filesystem
+#orionjs:s3
+vsivsi:orion-file-collection
+orionjs:summernote
+orionjs:froala
+orionjs:file-attribute
+orionjs:relationships
+#orionjs:lang-es
+accounts-password
+less
+reywood:publish-composite
+dburles:collection-helpers
+orionjs:lang-en
+orionjs:pages
+orionjs:image-attribute
+nicolaslopezj:orion-ga
+timfam:meetup
+
