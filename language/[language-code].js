@@ -162,6 +162,9 @@ i18n.map('[language-code]', {
     },
     image: {
       choose: 'Choose image'
+    },
+    images: {
+      choose: 'Choose the images'
     }
   },
   tabular: {
@@ -172,9 +175,9 @@ i18n.map('[language-code]', {
     emptyTable: 'No data available in table',
     paginate: {
       first: 'First',
-      previous: 'Previous', 
+      previous: 'Previous',
       next: 'Next',
       last: 'Last',
     }
   }
-})
+});
