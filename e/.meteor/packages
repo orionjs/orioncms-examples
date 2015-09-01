@@ -4,19 +4,27 @@
 # but you can also edit it by hand.
 
 meteor-platform
-iron:router
-nicolaslopezj:router-layer
+
+#iron:router
+kadira:flow-router
+kadira:blaze-layout
+
 orionjs:core
+
 orionjs:bootstrap
 twbs:bootstrap
 fortawesome:fontawesome
+# orionjs:materialize
+# materialize:materialize
+
 orionjs:filesystem
-vsivsi:orion-file-collection
+orionjs:s3
 orionjs:summernote
 orionjs:froala
-orionjs:image-attribute
+orionjs:file-attribute
 orionjs:relationships
 orionjs:lang-es
+orionjs:pages
 accounts-password
 less
 reywood:publish-composite

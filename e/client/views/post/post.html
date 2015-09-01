@@ -1,0 +1,13 @@
+<template name="post">
+	<div class="post-detail">
+		<h3>
+      {{ post.title }}
+      <small>by {{ post.getCreator.profile.name }}</small>  
+    </h3>
+		<div class="image" style="background-image: url({{ post.image.url }})"></div>
+		<br>
+		<div class="content">
+			{{{ post.body }}}
+		</div>
+	</div>
+</template>

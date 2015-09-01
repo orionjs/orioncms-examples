@@ -2,7 +2,7 @@
  * Publish all posts
  */
 Meteor.publish('posts', function () {
-  return Posts.find({}, { sort: { createdAt: -1 }, limit: 30 });
+  return Posts.find();
 });
 
 /**
@@ -10,7 +10,7 @@ Meteor.publish('posts', function () {
  */
 Meteor.publishComposite('postsWithUsers', {
   find: function() {
-    return Posts.find({}, { sort: { createdAt: -1 }, limit: 30 });
+    return Posts.find();
   },
   children: [{
     find: function(post) {

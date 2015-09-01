@@ -1,0 +1,27 @@
+<template name="home">
+	{{# unless currentUser }}
+	<p><b>Register to edit the content of this site</b></p>
+	{{/ unless }}
+	<p>
+		Orion allows the admin to easily
+		<a href="{{ pathFor 'dictionary.update' }}">edit</a>
+		content of the site, like the following text:
+		<i class="text-muted">"{{ dict 'public.homeText' }}"</i>.
+	</p>
+	{{# each posts }}
+		{{> homePost }}
+	{{/ each }}
+</template>
+
+<template name="homePost">
+	<hr>
+	<div class="home-post">
+		<h3>
+			{{ title }}
+			<small>by {{ getCreator.profile.name }}</small>
+		</h3>
+		<a href="{{ pathFor 'post' }}">
+			<div class="image" style="background-image: url({{ image.url }})"></div>
+		</a>
+	</div>
+</template>

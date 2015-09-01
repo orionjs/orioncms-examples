@@ -13,10 +13,10 @@ Options.set('forbidClientAccountCreation', false);
 Options.arrayPush('defaultRoles', 'community');
 
 /**
- * To set the schema of the user profile, so we can
+ * To set the schema of the user profile, so we can 
  */
 Options.set('profileSchema', {
-  picture: orion.attribute('image', {
+  picture: orion.attribute('file', {
     label: orion.helpers.getTranslation('accountsPictureLabel'),
     optional: true
   }),

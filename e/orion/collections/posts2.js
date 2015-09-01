@@ -5,17 +5,18 @@
  * We can set options to that new collection, like which fields
  * we will show in the index of the collection in the admin
  */
-Posts = new orion.collection('posts', {
+Posts2 = new orion.collection('posts2', {
   singularName: orion.helpers.getTranslation('posts.singularName'), // The name of one of this items
   pluralName: orion.helpers.getTranslation('posts.pluralName'), // The name of more than one of this items
-  title: orion.helpers.getTranslation('posts.title'), // The title of the page
+  title: 'Posts 2', // The title of the page
   link: {
     /**
      * The text that you want to show in the sidebar.
      * The default value is the name of the collection, so
      * in this case is not necesary
      */
-    title: orion.helpers.getTranslation('posts.title')
+    title: orion.helpers.getTranslation('posts.title'),
+    parent: 'dictionary-update'
   },
   /**
    * Tabular settings for this collection
@@ -28,7 +29,7 @@ Posts = new orion.collection('posts', {
        * the index table you must call this function
        * orion.attributeColumn(attributeType, key, label)
        */
-      orion.attributeColumn('image', 'image', orion.helpers.getTranslation('posts.schema.image')),
+      orion.attributeColumn('file', 'image', orion.helpers.getTranslation('posts.schema.image')),
       orion.attributeColumn('summernote', 'body', orion.helpers.getTranslation('posts.schema.body')),
       orion.attributeColumn('createdBy', 'createdBy', orion.helpers.getTranslation('posts.schema.createdBy')),
       orion.attributeColumn('createdAt', 'createdAt', orion.helpers.getTranslation('posts.schema.createdAt'))
@@ -40,20 +41,20 @@ Posts = new orion.collection('posts', {
  * Now we will attach the schema for that collection.
  * Orion will automatically create the corresponding form.
  */
-Posts.attachSchema(new SimpleSchema({
+Posts2.attachSchema(new SimpleSchema({
   title: {
     type: String,
     label: orion.helpers.getTranslation('posts.schema.title') // We use this function to make i18n work in autoform
   },
   /**
-   * The image attribute is a custom orion attribute
+   * The file attribute is a custom orion attribute
    * This is where orion do the magic. Just set
    * the attribute type and it will automatically
-   * create the form for the image.
+   * create the form for the file.
    * WARNING: the url of the image will not be saved in
    * .image, it will be saved in .image.url.
    */
-  image: orion.attribute('image', {
+  image: orion.attribute('file', {
       label: orion.helpers.getTranslation('posts.schema.image'), // We use this function to make i18n work in autoform
       optional: true
   }),

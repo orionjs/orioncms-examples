@@ -15,7 +15,8 @@ Posts = new orion.collection('posts', {
      * The default value is the name of the collection, so
      * in this case is not necesary
      */
-    title: orion.helpers.getTranslation('posts.title')
+    title: orion.helpers.getTranslation('posts.title'),
+    parent: 'dictionary-update'
   },
   /**
    * Tabular settings for this collection
@@ -28,7 +29,7 @@ Posts = new orion.collection('posts', {
        * the index table you must call this function
        * orion.attributeColumn(attributeType, key, label)
        */
-      orion.attributeColumn('image', 'image', orion.helpers.getTranslation('posts.schema.image')),
+      orion.attributeColumn('file', 'image', orion.helpers.getTranslation('posts.schema.image')),
       orion.attributeColumn('summernote', 'body', orion.helpers.getTranslation('posts.schema.body')),
       orion.attributeColumn('createdBy', 'createdBy', orion.helpers.getTranslation('posts.schema.createdBy')),
       orion.attributeColumn('createdAt', 'createdAt', orion.helpers.getTranslation('posts.schema.createdAt'))
@@ -46,14 +47,14 @@ Posts.attachSchema(new SimpleSchema({
     label: orion.helpers.getTranslation('posts.schema.title') // We use this function to make i18n work in autoform
   },
   /**
-   * The image attribute is a custom orion attribute
+   * The file attribute is a custom orion attribute
    * This is where orion do the magic. Just set
    * the attribute type and it will automatically
-   * create the form for the image.
+   * create the form for the file.
    * WARNING: the url of the image will not be saved in
    * .image, it will be saved in .image.url.
    */
-  image: orion.attribute('image', {
+  image: orion.attribute('file', {
       label: orion.helpers.getTranslation('posts.schema.image'), // We use this function to make i18n work in autoform
       optional: true
   }),
