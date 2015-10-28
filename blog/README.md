@@ -12,12 +12,6 @@ Creates automatically a admin panel for your
 collections and gives you the ability to have
 key/value definitions for your site.
 
-## Installing
-
-This example uses AWS S3 to save the files.
-Read the instructions on how to setup the S3 [here](https://github.com/orionjs/orion/tree/master/packages/s3).
-
-
 ## Updates
 
 Any change that has orion will be reflected here, always up to date.
