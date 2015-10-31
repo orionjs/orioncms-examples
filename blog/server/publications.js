@@ -2,7 +2,8 @@
  * Publish all posts
  */
 Meteor.publish('posts', function () {
-  return Posts.find({}, { sort: { createdAt: -1 }, limit: 30 });
+  var ip = this.connection.clientAddress;
+  return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { createdAt: -1 }, limit: 30, fields: { flaggedBy: 0 } });
 });
 
 /**
@@ -10,14 +11,15 @@ Meteor.publish('posts', function () {
  */
 Meteor.publishComposite('postsWithUsers', {
   find: function() {
-    return Posts.find({}, { sort: { createdAt: -1 }, limit: 30 });
+    var ip = this.connection.clientAddress;
+    return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { createdAt: -1 }, limit: 30, fields: { flaggedBy: 0 } });
   },
   children: [{
     find: function(post) {
       return Meteor.users.find({ _id: post.createdBy }, { fields: { profile: 1 } });
     }
   }]
-})
+});
 
 /**
  * Publish one post specifically with its creator profile
@@ -26,12 +28,13 @@ Meteor.publishComposite('onePostWithUser', function(postId) {
   check(postId, String);
   return {
     find: function() {
-      return Posts.find({ _id: postId });
+      var ip = this.connection.clientAddress;
+      return Posts.find({ _id: postId, flaggedBy: { $ne: ip } }, { fields: { flaggedBy: 0 } });
     },
     children: [{
       find: function(post) {
         return Meteor.users.find({ _id: post.createdBy }, { fields: { profile: 1 } });
       }
     }]
-  }
-})
+  };
+});

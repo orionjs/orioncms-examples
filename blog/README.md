@@ -1,14 +1,14 @@
 Orion Example Blog
 ==================
 
-``` v2.0 ```
+``` v2.1 ```
 
 http://orion-example.meteor.com
 
 **Learn how to use orion with this example.**
 
-Orion is a simple and useful cms for meteor. 
-Creates automatically a admin panel for your 
+Orion is a simple and useful cms for meteor.
+Creates automatically a admin panel for your
 collections and gives you the ability to have
 key/value definitions for your site.
 

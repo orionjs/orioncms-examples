@@ -65,6 +65,14 @@ Posts.attachSchema(new SimpleSchema({
       label: orion.helpers.getTranslation('posts.schema.body') // We use this function to make i18n work in autoform
   }),
   /**
+   * Ids of the users that flagged this posts
+   */
+  flaggedBy: {
+    type: [String],
+    optional: true,
+    index: true
+  },
+  /**
    * This attribute sets the user id of the user that created
    * this post automatically.
    */

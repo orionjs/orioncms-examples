@@ -8,15 +8,31 @@
 		content of the site, like the following text:
 		<i class="text-muted">"{{ dict 'public.homeText' }}"</i>.
 	</p>
-	{{# each posts }}
-		{{> homePost }}
-	{{/ each }}
+	{{# if Template.subscriptionsReady }}
+		{{# each posts }}
+			{{> homePost }}
+		{{ else }}
+			<p>
+				No posts found
+			</p>
+		{{/ each }}
+	{{ else }}
+		<p>
+			Loading...
+		</p>
+	{{/ if }}
+
 </template>
 
 <template name="homePost">
 	<hr>
 	<div class="home-post">
 		<h3>
+			<span class="pull-right">
+				<a href="#" class="flag-btn" style="color: #999">
+					<small><i class="fa fa-flag"></i></small>
+				</a>
+			</span>
 			{{ title }}
 			<small>by {{ getCreator.profile.name }}</small>
 		</h3>

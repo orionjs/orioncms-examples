@@ -1,13 +1,26 @@
 <template name="post">
-	<div class="post-detail">
-		<h3>
-      {{ post.title }}
-      <small>by {{ post.getCreator.profile.name }}</small>  
-    </h3>
-		<div class="image" style="background-image: url({{ post.image.url }})"></div>
-		<br>
-		<div class="content">
-			{{{ post.body }}}
-		</div>
-	</div>
+
+	{{# if Template.subscriptionsReady }}
+		{{# with post }}
+			<div class="post-detail">
+				<h3>
+					{{ title }}
+					<small>by {{ getCreator.profile.name }}</small>
+				</h3>
+				<div class="image" style="background-image: url({{ image.url }})"></div>
+				<br>
+				<div class="content">
+					{{{ body }}}
+				</div>
+			</div>
+		{{ else }}
+			<p>
+				Not found
+			</p>
+		{{/ with }}
+	{{ else }}
+		<p>
+			Loading...
+		</p>
+	{{/ if }}
 </template>

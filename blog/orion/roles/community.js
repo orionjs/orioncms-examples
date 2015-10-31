@@ -24,7 +24,7 @@ CommunityRole.allow('collections.posts.index', true);
  */
 CommunityRole.helper('collections.posts.indexFilter', function() {
   return { createdBy: this.userId };
-})
+});
 
 /**
  * Users can create posts
@@ -71,3 +71,9 @@ CommunityRole.allow('collections.posts.showRemove', function(doc) {
   return doc.createdBy == this.userId;
 });
 
+/**
+ * Users cant modify the following fields
+ */
+CommunityRole.helper('collections.posts.forbiddenFields', function(doc) {
+  return ['flaggedBy'];
+});
