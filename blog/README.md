@@ -31,6 +31,7 @@ This example covers the following points:
 - Allow users registration
 - Orion Permissions
 - Orion pages package
+- Blacklisting ips, flagging posts.
 
 ## Orion Packages
 
