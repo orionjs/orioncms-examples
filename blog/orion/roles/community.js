@@ -77,3 +77,33 @@ CommunityRole.allow('collections.posts.showRemove', function(doc) {
 CommunityRole.helper('collections.posts.forbiddenFields', function(doc) {
   return ['flaggedBy'];
 });
+
+/**
+ * Blocked users cant insert or update posts and edit the dictionary
+ */
+CommunityRole.deny('collections.posts.insert', function(userId, doc) {
+  var ip = Meteor.users.findOne(userId).status.lastLogin.ipAddr;
+  var deny = !!BlockedIps.find({ ip: ip }).count();
+  if (deny) {
+    console.log('post insert blocked to', userId);
+  }
+  return deny;
+});
+CommunityRole.deny('collections.posts.update', function(userId, doc) {
+  var ip = Meteor.users.findOne(userId).status.lastLogin.ipAddr;
+  var deny = !!BlockedIps.find({ ip: ip }).count();
+  if (deny) {
+    console.log('post update blocked to', userId);
+  }
+  return deny;
+});
+CommunityRole.deny('dictionary.update', function(userId, doc) {
+  if (Meteor.isServer) {
+    var ip = Meteor.users.findOne(userId).status.lastLogin.ipAddr;
+    var deny = !!BlockedIps.find({ ip: ip }).count();
+    if (deny) {
+      console.log('dictionary update blocked to', userId);
+    }
+    return deny;
+  }
+});
