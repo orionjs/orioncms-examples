@@ -3,20 +3,24 @@
  */
 Meteor.publish('posts', function () {
   var ip = this.connection.clientAddress;
-  return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { createdAt: -1 }, limit: 30, fields: { flaggedBy: 0 } });
+  return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { likesCount: -1 }, limit: 30, fields: { flaggedBy: 0 } });
 });
 
 /**
  * Publish posts with all the creators profiles
  */
-Meteor.publishComposite('postsWithUsers', {
+Meteor.publishComposite('posts.home', {
   find: function() {
     var ip = this.connection.clientAddress;
-    return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { createdAt: -1 }, limit: 30, fields: { flaggedBy: 0 } });
+    return Posts.find({ flaggedBy: { $ne: ip } }, { sort: { likesCount: -1 }, limit: 30, fields: { flaggedBy: 0 } });
   },
   children: [{
     find: function(post) {
       return Meteor.users.find({ _id: post.createdBy }, { fields: { profile: 1 } });
+    }
+  }, {
+    find: function(post) {
+      return Likes.find({ userId: this.userId, postId: post._id });
     }
   }]
 });

@@ -73,6 +73,14 @@ Posts.attachSchema(new SimpleSchema({
     index: true
   },
   /**
+   * Likes count
+   */
+  likesCount: {
+    type: Number,
+    optional: true,
+    index: true
+  },
+  /**
    * This attribute sets the user id of the user that created
    * this post automatically.
    */
@@ -89,5 +97,8 @@ Posts.attachSchema(new SimpleSchema({
 Posts.helpers({
   getCreator: function () {
     return Meteor.users.findOne({ _id: this.createdBy });
+  },
+  likes: function(userId) {
+    return !!Likes.find({ userId: userId, postId: this._id }).count();
   }
 });

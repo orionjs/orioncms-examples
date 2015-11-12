@@ -75,7 +75,7 @@ CommunityRole.allow('collections.posts.showRemove', function(doc) {
  * Users cant modify the following fields
  */
 CommunityRole.helper('collections.posts.forbiddenFields', function(doc) {
-  return ['flaggedBy'];
+  return ['flaggedBy', 'likedBy', 'likesCount'];
 });
 
 /**

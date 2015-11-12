@@ -31,3 +31,8 @@ AccountsTemplates.configureRoute('enrollAccount', {
   layoutTemplate: 'orionBootstrapOutAdminLayout',
   redirect: '/admin'
 });
+
+if (Meteor.isServer) {
+  Accounts.emailTemplates.siteName = 'Orion Example';
+  Accounts.emailTemplates.from = 'Orion Example <example@orionjs.org>';
+}
