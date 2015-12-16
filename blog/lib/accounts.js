@@ -2,7 +2,7 @@ AccountsTemplates.configure({
   sendVerificationEmail: true,
   showResendVerificationEmailLink: true,
   enforceEmailVerification: true,
-  showForgotPasswordLink: true
+  showForgotPasswordLink: true,
 });
 
 var layout = 'orionMaterializeOutAdminLayout';
@@ -13,7 +13,7 @@ AccountsTemplates.configureRoute('verifyEmail', {
   path: '/verify-email',
   template: 'orionBootstrapLogin',
   layoutTemplate: 'orionBootstrapOutAdminLayout',
-  redirect: '/admin'
+  redirect: '/admin',
 });
 
 AccountsTemplates.configureRoute('resetPwd', {
@@ -21,7 +21,7 @@ AccountsTemplates.configureRoute('resetPwd', {
   path: '/reset-password',
   template: 'orionBootstrapLogin',
   layoutTemplate: 'orionBootstrapOutAdminLayout',
-  redirect: '/admin'
+  redirect: '/admin',
 });
 
 AccountsTemplates.configureRoute('enrollAccount', {
@@ -29,7 +29,7 @@ AccountsTemplates.configureRoute('enrollAccount', {
   path: '/enroll-account',
   template: 'orionBootstrapLogin',
   layoutTemplate: 'orionBootstrapOutAdminLayout',
-  redirect: '/admin'
+  redirect: '/admin',
 });
 
 if (Meteor.isServer) {

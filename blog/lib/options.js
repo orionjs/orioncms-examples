@@ -18,10 +18,10 @@ Options.arrayPush('defaultRoles', 'community');
 Options.set('profileSchema', {
   picture: orion.attribute('image', {
     label: orion.helpers.getTranslation('accountsPictureLabel'),
-    optional: true
+    optional: true,
   }),
   name: {
     type: String,
-    label: orion.helpers.getTranslation('accountsNameLabel')
-  }
+    label: orion.helpers.getTranslation('accountsNameLabel'),
+  },
 });

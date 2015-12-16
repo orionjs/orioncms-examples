@@ -42,7 +42,7 @@ CommunityRole.allow('collections.posts.update', function(userId, doc, fields, mo
  * Users can't change the createdBy attribute
  */
 CommunityRole.deny('collections.posts.update', function(userId, doc, fields, modifier) {
-  return !_.contains(fields, 'userId');
+  return _.contains(fields, 'userId');
 });
 
 /**
@@ -87,16 +87,20 @@ CommunityRole.deny('collections.posts.insert', function(userId, doc) {
   if (deny) {
     console.log('post insert blocked to', userId);
   }
+
   return deny;
 });
+
 CommunityRole.deny('collections.posts.update', function(userId, doc) {
   var ip = Meteor.users.findOne(userId).status.lastLogin.ipAddr;
   var deny = !!BlockedIps.find({ ip: ip }).count();
   if (deny) {
     console.log('post update blocked to', userId);
   }
+
   return deny;
 });
+
 CommunityRole.deny('dictionary.update', function(userId, doc) {
   if (Meteor.isServer) {
     var ip = Meteor.users.findOne(userId).status.lastLogin.ipAddr;
@@ -104,6 +108,7 @@ CommunityRole.deny('dictionary.update', function(userId, doc) {
     if (deny) {
       console.log('dictionary update blocked to', userId);
     }
+
     return deny;
   }
 });

@@ -7,11 +7,11 @@ i18n.map('en', {
   accountsNameLabel: 'Name',
   dictionary: {
     images: {
-      logo: 'Site Logo'
+      logo: 'Site Logo',
     },
     public: {
-      homeText: 'The text on the home'
-    }
+      homeText: 'The text on the home',
+    },
   },
   posts: {
     singularName: 'post',
@@ -22,9 +22,9 @@ i18n.map('en', {
       image: 'Image',
       body: 'Body',
       createdBy: 'Created By',
-      createdAt: 'Created At'
-    }
-  }
+      createdAt: 'Created At',
+    },
+  },
 });
 
 i18n.map('es', {
@@ -32,11 +32,11 @@ i18n.map('es', {
   accountsNameLabel: 'Nombre',
   dictionary: {
     images: {
-      logo: 'Logo del sitio'
+      logo: 'Logo del sitio',
     },
     public: {
-      homeText: 'El texto en el inicio'
-    }
+      homeText: 'El texto en el inicio',
+    },
   },
   posts: {
     singularName: 'publicación',
@@ -47,7 +47,7 @@ i18n.map('es', {
       image: 'Imagen',
       body: 'Contenido',
       createdBy: 'Creado Por',
-      createdAt: 'Creado En'
-    }
-  }
+      createdAt: 'Creado En',
+    },
+  },
 });
